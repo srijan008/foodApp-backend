@@ -9,7 +9,7 @@ const cors = require('cors');
 const { METHODS } = require('http');
 app.use(cors(
   {
-    origin: ["https://my-6q1om6nyh-srijans-projects-5421643c.vercel.app"],
+    origin: ["my-app-ebon-delta.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
   }
