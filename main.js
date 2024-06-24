@@ -4,12 +4,11 @@ const OrderUser = require('./route/OrderUser')
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
-const port = 3003;
+const port = 3004;
 const cors = require('cors');
-const { METHODS } = require('http');
 app.use(cors(
   {
-    origin: ["my-app-ebon-delta.vercel.app"],
+    origin: [""],
     methods: ["POST", "GET"],
     credentials: true
   }
