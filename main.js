@@ -6,14 +6,12 @@ const express = require('express');
 const app = express();
 const port = 3004;
 const cors = require('cors');
-app.use(cors(
-  {
-    origin: ["http://localhost:3000/"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
-  
-));
+app.use(cors({
+  origin: "http://localhost:3000",
+  methods: ["POST", "GET"],
+  credentials: true
+}));
+
 
 
 const mongo_URL = "mongodb+srv://srijan:121122@cluster0.grwvfmy.mongodb.net/gofoodmern?retryWrites=true&w=majority&appName=Cluster0";
@@ -49,7 +47,7 @@ mongoose
     app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.send("Your backend app is running correctly");
+    res.send("Your backend app is running correctly !!");
 });
 app.use('/api', createUser );
 app.use('/api', displaydata );
