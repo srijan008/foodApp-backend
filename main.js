@@ -8,7 +8,7 @@ const port = 3004;
 const cors = require('cors');
 app.use(cors(
   {
-    origin: ["my-app-beige-nu-74.vercel.app"],
+    origin: ["http://localhost:3000/"],
     methods: ["POST", "GET"],
     credentials: true
   }
