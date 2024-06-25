@@ -49,7 +49,7 @@ mongoose
     app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.send("Hello world");
+    res.send("Your backend app is running correctly");
 });
 app.use('/api', createUser );
 app.use('/api', displaydata );
