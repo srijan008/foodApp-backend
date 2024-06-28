@@ -7,7 +7,7 @@ const app = express();
 const port = 3004;
 const cors = require('cors');
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://localhost:3000",
   origin: "https://my-app-beige-nu-74.vercel.app",
   methods: ["POST", "GET"],
   credentials: true
