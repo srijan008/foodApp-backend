@@ -5,12 +5,21 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const port = 3004;
-const cors = require('cors');
-app.use(cors({
-  origin: "https://my-app-beige-nu-74.vercel.app",
+const allowedOrigins = ['http://localhost:3000', 'https://my-app-beige-nu-74.vercel.app'];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ["POST", "GET"],
   credentials: true
-}));
+};
+
+app.use(cors(corsOptions));
 
 
 
